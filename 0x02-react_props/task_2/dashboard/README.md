@@ -1,31 +1,31 @@
-Create a NotificationItem.js
-The Notifications component is repeating the same tags a lot. It will be hard to maintain and reuse. Let’s create a component to support the li generation.
+o develop your tests faster, you can watch them. The test suite will run for every change you make:
 
-Create a new component named NotificationItem:
+Add the following script to task_1/package.json: "test-watch": "jest --watch"
+Run your suite using npm run test-watch
+Header.test.js
+Import your new Header component within the test, and write two checks:
 
-it should render a li tag
-the component accept three properties (type, html, and value)
-type should be rendered with the data-notification-type attribute
-value should be rendered within the tag
-html should be rendered with the dangerouslySetInnerHTML attribute
-Create a NotificationItem.test.js
-Every component should be tested. Create a new NotificationItem.test.js file, and add the following checks:
+Shallow render the Header component to verify it renders without crashing
+Verify that the components render img and h1 tags
+Login.test.js
+Import your new Login component within the test, and write two checks:
 
-Verify that the basic rendering of the component works without crashing
-Verify that by passing dummy type and value props, it renders the correct html (for example: type=“default” and value=“test”)
-Verify that by passing a dummy html prop, it renders the correct html (for example: html={{ __html: '<u>test</u>' }})
-Modify Notifications.js
-Import the new NotificationItem component in the Notifications.js file and replace the <li> tags with NotificationItem components.
+Shallow render the Login component to verify it renders without crashing
+Verify that the components renders 2 input tags and 2 label tags
+Footer.test.js
+Import your new Footer component within the test, and write two checks:
 
-Modify Notifications.test.js
-Modify the Notifications.test.js file to change one of the check:
+Shallow render the Footer component to verify it renders without crashing
+Verify that the components at the very least render the text “Copyright”
+App.test.js
+Modify the App.test.js file, and add four checks:
 
-Instead of testing if the component renders li, check that the component renders NotificationItem elements
-Add a test to verify that the first NotificationItem element renders the right html (note: this is usually not the best way to write tests, but sometimes necessary when you don’t control the child component)
+It should contain the Notifications component
+It should contain the Header component
+It should contain the Login component
+It should contain the Footer component
 Requirements:
 
-At this point, reloading the App should display the exact same page as the last task
-The console in your browser should not show any error or warning
-Running the test suites, should show:
-Test Suites: 7 passed, 7 total
-Tests: 22 passed, 22 total
+At this point, running the test suites, should show:
+Test Suites: 6 passed, 6 total
+Tests: 18 passed, 18 total
