@@ -1,27 +1,10 @@
-const path = require('path');
-
+// webpack.config.js
 module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
+  // other configuration options...
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000
+    host: '192.168.561', // Listen on all network interfaces
+    port: 8564,      // Specify your port number
+    // other options...
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
-  }
 };
 
