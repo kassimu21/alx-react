@@ -1,29 +1,31 @@
-Create a new handing event
+o develop your tests faster, you can watch them. The test suite will run for every change you make:
 
-In the Notifications component:
+Add the following script to task_1/package.json: "test-watch": "jest --watch"
+Run your suite using npm run test-watch
+Header.test.js
+Import your new Header component within the test, and write two checks:
 
-Convert the function into a React Class
-Make sure that the tests are still passing
-Create a new markAsRead function within the Notifications class. It accepts one argument: id(number)
-When the function is called, it logs to the console the message “Notification $id has been marked as read
-Pass the function markAsRead to the NotificationItem component as a property
-In the NotificationItem Class:
+Shallow render the Header component to verify it renders without crashing
+Verify that the components render img and h1 tags
+Login.test.js
+Import your new Login component within the test, and write two checks:
 
-Modify the li element to call the new function markAsRead on click. It should send the id of the notification
-Define the new property type and the default property for the new properties
-Add the tests
+Shallow render the Login component to verify it renders without crashing
+Verify that the components renders 2 input tags and 2 label tags
+Footer.test.js
+Import your new Footer component within the test, and write two checks:
 
-In the Notifications test file:
+Shallow render the Footer component to verify it renders without crashing
+Verify that the components at the very least render the text “Copyright”
+App.test.js
+Modify the App.test.js file, and add four checks:
 
-Create a test, that will mockup the console.log function
-Check that when calling the function markAsRead on an instance of the component, the spy is being called with the right message
-In the NotificationItem test file:
-
-Create a test, that will pass a spy as the markAsRead property
-Check that when simulating a click on the component, the spy is called with the right ID argument
+It should contain the Notifications component
+It should contain the Header component
+It should contain the Login component
+It should contain the Footer component
 Requirements:
 
-Make sure to bind the function markAsRead in your constructor to avoid unecessary re-rendering
-In the test file, make sure to restore the console function you mocked
-At this point, reloading the App should display the exact same page as the last task. Use the React Chrome Extension to make sure the Notifications component displays correctly
-The console in your browser should not show any error or warning
+At this point, running the test suites, should show:
+Test Suites: 6 passed, 6 total
+Tests: 18 passed, 18 total
