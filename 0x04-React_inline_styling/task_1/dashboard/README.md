@@ -1,42 +1,31 @@
-Install Aphrodite using npm with:
+o develop your tests faster, you can watch them. The test suite will run for every change you make:
 
-npm install --save aphrodite
+Add the following script to task_1/package.json: "test-watch": "jest --watch"
+Run your suite using npm run test-watch
+Header.test.js
+Import your new Header component within the test, and write two checks:
 
-Modify the App component in task_1/dashboard/src/App/App.js:
+Shallow render the Header component to verify it renders without crashing
+Verify that the components render img and h1 tags
+Login.test.js
+Import your new Login component within the test, and write two checks:
 
-Modify the component to use Aphrodite within the js file
-Define the styling for the body and the footer within the file
-Delete the file App.css and the import
-Modify the BodySectionWithMarginBottom component in task_1/dashboard/src/BodySection/BodySectionWithMarginBottom.js:
+Shallow render the Login component to verify it renders without crashing
+Verify that the components renders 2 input tags and 2 label tags
+Footer.test.js
+Import your new Footer component within the test, and write two checks:
 
-Modify the component to use Aphrodite within the js file
-Define the styling for the margin within the file
-Delete the file BodySection.css and the import
-Modify the CourseList component in task_1/dashboard/src/CourseList/CourseList.js:
+Shallow render the Footer component to verify it renders without crashing
+Verify that the components at the very least render the text “Copyright”
+App.test.js
+Modify the App.test.js file, and add four checks:
 
-Modify the component to use Aphrodite within the js file
-Define the styling for the list within the file
-Remove the styling for the list within the CourseList.css file
-Modify the Header component in task_1/dashboard/src/Header/Header.js:
-
-Modify the component to use Aphrodite within the js file
-Define the styling for the logo and the header within the file
-Delete the file Header.css and the import
-Modify the Login component in task_1/dashboard/src/Login/Login.js:
-
-Modify the component to use Aphrodite within the js file
-Define the styling for the margin within the file
-Delete the file Login.css and the import
-Modify the Notifications component in task_1/dashboard/src/Notifications/Notifications.js:
-
-Modify the component to use Aphrodite within the js file
-Define the styling for the notifications panel within the file
-Remove the styling for the notifications panel from the Notifications.css
-Make sure the test suites are still passing!
-
-Tips:
-
-Look into using StyleSheetTestUtils.suppressStyleInjection at the top of your test file, to prevent issues with style injections
+It should contain the Notifications component
+It should contain the Header component
+It should contain the Login component
+It should contain the Footer component
 Requirements:
 
-At this point, the UI should look exactly the same with the inline styling as it was with the CSS files
+At this point, running the test suites, should show:
+Test Suites: 6 passed, 6 total
+Tests: 18 passed, 18 total
