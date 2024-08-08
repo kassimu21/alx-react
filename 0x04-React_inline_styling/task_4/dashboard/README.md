@@ -1,14 +1,31 @@
-Let’s create an animation that we can display when the user hovers on the Notifications menu or when there is a new notification. In task_4/dashboard/Notifications/Notifications.js:
+o develop your tests faster, you can watch them. The test suite will run for every change you make:
 
-Create one object containing the CSS frames to make the opacity change from 0.5 to 1
-Create one object containing the CSS frames to make the element bounce. You can play with translateY and alternate from 0px to -5px and 5px
-Modify the styling for the menu item to:
+Add the following script to task_1/package.json: "test-watch": "jest --watch"
+Run your suite using npm run test-watch
+Header.test.js
+Import your new Header component within the test, and write two checks:
 
-Float on the right of the screen over every element
-The background color should be #fff8f8
-Show the pointer cursor when hovering the element
-On hover, animate the element with the two new animations. The duration for the opacity change should be 1s, and the duration for the bouncing effect should be 0.5s. The animation should repeat 3 times only
-When the list of notifications is visible, hide the menu item
+Shallow render the Header component to verify it renders without crashing
+Verify that the components render img and h1 tags
+Login.test.js
+Import your new Login component within the test, and write two checks:
+
+Shallow render the Login component to verify it renders without crashing
+Verify that the components renders 2 input tags and 2 label tags
+Footer.test.js
+Import your new Footer component within the test, and write two checks:
+
+Shallow render the Footer component to verify it renders without crashing
+Verify that the components at the very least render the text “Copyright”
+App.test.js
+Modify the App.test.js file, and add four checks:
+
+It should contain the Notifications component
+It should contain the Header component
+It should contain the Login component
+It should contain the Footer component
 Requirements:
 
-When the notifications panel is hovered or opened, the UI should look like the image below:
+At this point, running the test suites, should show:
+Test Suites: 6 passed, 6 total
+Tests: 18 passed, 18 total
