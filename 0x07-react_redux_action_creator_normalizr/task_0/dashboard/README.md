@@ -1,14 +1,31 @@
-Read data from a JSON
+o develop your tests faster, you can watch them. The test suite will run for every change you make:
 
-Reuse the latest dashboard project you worked on in the React course 0x06-React_state
+Add the following script to task_1/package.json: "test-watch": "jest --watch"
+Run your suite using npm run test-watch
+Header.test.js
+Import your new Header component within the test, and write two checks:
 
-For this task, place notifications.json into the root of the project directory and use the data inside for the next step.
+Shallow render the Header component to verify it renders without crashing
+Verify that the components render img and h1 tags
+Login.test.js
+Import your new Login component within the test, and write two checks:
 
-Create a new notifications.js file in a schema folder:
+Shallow render the Login component to verify it renders without crashing
+Verify that the components renders 2 input tags and 2 label tags
+Footer.test.js
+Import your new Footer component within the test, and write two checks:
 
-Import the JSON data from notifications.json and give it a name. Try import * as [variable name] from [path to notifications.json]
-Create a function named getAllNotificationsByUser that accepts userId as an argument
-The function should return a list containing all the context objects from the notifications.json data when the author id is the same as the userId
-In the same schema directory, create a notifications.test.js file:
+Shallow render the Footer component to verify it renders without crashing
+Verify that the components at the very least render the text “Copyright”
+App.test.js
+Modify the App.test.js file, and add four checks:
 
-Add a test that uses the id 5debd764a7c57c7839d722e9 and verifies that the following data is returned:
+It should contain the Notifications component
+It should contain the Header component
+It should contain the Login component
+It should contain the Footer component
+Requirements:
+
+At this point, running the test suites, should show:
+Test Suites: 6 passed, 6 total
+Tests: 18 passed, 18 total
